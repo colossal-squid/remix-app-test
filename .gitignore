@@ -5,3 +5,6 @@ node_modules
 /public/build
 .env
 prisma/dev.db
+ui-debug.log
+functions/firebase-debug.log
+.firebase/

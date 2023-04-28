@@ -2,9 +2,9 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "build": "remix build && cp ",
+    "build": "remix build",
     "dev": "remix dev",
-    "start": "remix-serve build",
+    "start": "firebase emulators:start",
     "typecheck": "tsc"
   },
   "prisma": {
