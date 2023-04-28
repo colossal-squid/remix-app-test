@@ -28,8 +28,8 @@ export default function JokesRoute() {
                     <h1 className="home-link">
                         <Link
                             to="/"
-                            title="Remix Jokes"
-                            aria-label="Remix Jokes"
+                            title="recup Jokes"
+                            aria-label="recup Jokes"
                         >
                             <span className="logo">🤪</span>
                             <span className="logo-medium">J🤪KES</span>

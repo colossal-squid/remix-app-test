@@ -1,6 +1,6 @@
-import express = require("express");
+const express = require("express");
 const {createRequestHandler} = require("@remix-run/express");
-import functions = require("firebase-functions");
+const functions = require("firebase-functions");
 
 exports.app = functions.https.onRequest(app());
 
@@ -19,7 +19,7 @@ export default function app() {
   server.all(
     "*",
     createRequestHandler({
-      build: require('../../build')
+      build: require('./build')
       // return anything you want here to be available as `context` in your
       // loaders and actions. This is where you can bridge the gap between Remix
       // and your server
