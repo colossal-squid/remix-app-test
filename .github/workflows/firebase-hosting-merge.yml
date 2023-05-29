@@ -12,9 +12,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: npm ci && npm run build
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_ROMANS_PLAYGROUND }}'
-          channelId: live
-          projectId: romans-playground
+          args: deploy # you need to pass SOME command to firebase cli
+        env:
+          GCP_SA_KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_ROMANS_PLAYGROUND  }}
+          PROJECT_ID: "romans-playground"
